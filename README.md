@@ -16,6 +16,6 @@ Files Review:
 		- Useful Articles
 	- Kaggle Competition Site - has large dataset (too large to upload to GitHub)
 
-Timeline:___________
-Goal:_______________
-Outcome:____________
+Timeline: ~6 Weeks - w/ 2 Week Large Group Check-in
+Goal: Personal Goals in Report Out
+Outcome: Mini-report out
