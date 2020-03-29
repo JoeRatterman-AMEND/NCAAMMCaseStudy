@@ -14,8 +14,8 @@ Files Review:
 		- LogisticRegressionExamples
 		- Lunardi2020Bracket
 		- Useful Articles
-	- Kaggle Competition Site - has large dataset (too large to upload to GitHub)
+	- Kaggle Competition Site - has large dataset (Will work to get updated)
 
-Timeline: ~6 Weeks - w/ 2 Week Large Group Check-in
+Timeline: ~6 Weeks - w/ 3 Week Large Group Check-in
 Goal: Personal Goals in Report Out
 Outcome: Mini-report out
