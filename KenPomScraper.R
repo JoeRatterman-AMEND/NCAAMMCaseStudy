@@ -1,5 +1,6 @@
 # Code from https://lakedatainsights.com/2019/04/08/scraping-web-page-tables-with-r/
 library(XML)
+library(dplyr)
 library(RCurl)
 library(rvest)
 library(stringr)
@@ -7,6 +8,7 @@ library(data.table)
 
 
 getKenPomYearData <- function(year){
+  
   theUrl <- paste0("https://kenpom.com/index.php?y=", as.character(year))
   page <- read_html(theUrl)
   tables <- page %>% html_nodes("table") %>% html_table()
@@ -17,9 +19,12 @@ getKenPomYearData <- function(year){
                       "Luck", "Luck_R", "SoS_AdjEM", "SoS_AdjEM_R", 
                       "OppO", "OppO_R", "OppD", "OppD_R", "NC_AdjEM", "NC_AdjEM_R")
   
-  data <- data %>% filter(!str_detect(Rank, "Rk")) # Remove label row
+  data <- data[!str_detect(data$Rank, "Rk"),] # Remove label row
   
-  data <- data %>% filter(nchar(as.character(Rank)) > 0) %>% as_tibble() # Remove empty rank rows.
+  data <- data[nchar(as.character(data$Rank)) > 0,] # Remove empty rank rows.
+  
+  data <- data %>% as_tibble()
+  
   data$Year = year
   
   return(data)
