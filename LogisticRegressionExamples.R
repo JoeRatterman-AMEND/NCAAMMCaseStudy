@@ -89,7 +89,7 @@ team_win <- base_data %>%
     Team2Pts = LTeamPts
   ) %>%
   select(Team1, Team2, Team1Seed, Team2Seed, Team1Pts, Team2Pts) %>%
-  mutate(Result = 1) # Team2 in this dataframe won, so give them
+  mutate(Result = 1) # Team1 in this dataframe won, so give them a 1
 
 team_lose <- base_data %>%
   mutate(

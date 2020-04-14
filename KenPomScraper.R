@@ -42,7 +42,7 @@ kenpom <- getKenPomYearData(2020)
 setDT(kenpom)
 
 
-kenpom[,Team:=gsub("\\.","",team)]
+kenpom[,Team:=gsub("\\.","",Team)]
 kenpom[,Team:=gsub("Cal St","CS",Team)]
 kenpom[,Team:=gsub("Albany","SUNY Albany",Team)]
 kenpom[,Team:=gsub("Abilene Christian","Abilene Chr",Team)]
@@ -96,3 +96,5 @@ kenpom[,Team:=gsub("Milwaukee","WI Milwaukee",Team)]
 kenpom[,Team:=gsub("Western Kentucky","WKU",Team)]
 kenpom[,Team:=gsub("College of Charleston","Col Charleston",Team)]
 kenpom[,Team:=gsub("Loyola Chicago","Loyola-Chicago",Team)]
+
+write.csv(kenpom, "2020KenPomData.csv")
